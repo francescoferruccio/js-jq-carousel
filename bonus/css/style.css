@@ -1,0 +1,51 @@
+/* regole generali */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.carousel {
+  display: flex;
+  height: 100vh;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* regole sezione images */
+.images {
+  width: 80%;
+  height: auto;
+}
+
+.images img {
+  display: none;
+  width: 100%;
+}
+
+.images img.active {
+  display: inline-block;
+}
+
+/* regole navigazione */
+.prev i:hover,
+.next i:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.nav {
+  position: absolute;
+  bottom: 10px;
+}
+
+.nav i.active {
+  color: #fff;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+
+.nav i:hover{
+  cursor: pointer;
+  transform: scale(1.2);
+}
