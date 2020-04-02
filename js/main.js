@@ -10,6 +10,8 @@ $(document).ready(function() {
   // al click sull'icona prev eseguo la funzione prevImg
   $(".prev i").click(prevImg);
 
+  $(".nav i").click(changeImg);
+
   // creo la funzione nextImg che scorre le immagini del carousel
   function nextImg() {
     // seleziono l'immagine con classe active, quindi quella attualmente visibile
@@ -55,7 +57,24 @@ $(document).ready(function() {
     }
   }
 
+  // creo una funzione che al click sui pallini mi cambia l'immagine
+  function changeImg() {
+    // mi salvo in una variabile l'indice del pallino cliccato
+    var index = $(this).index();
 
+    // tolgo la classe "active" all'img e al pallino
+    var imgActive = $(".images img.active");
+    imgActive.removeClass("active");
+    var circleActive = $(".nav i.active");
+    circleActive.removeClass("active");
+
+    // salvo il riferimento all'img e del pallino con lo stesso indice dell'elemento su cui ho cliccato e gli aggiungo la classe "active"
+    imgActive = $(".images img").get(index);
+    $(imgActive).addClass("active");
+
+    circleActive = $(".nav i").get(index);
+    $(circleActive).addClass("active");
+  }
 
 
 
