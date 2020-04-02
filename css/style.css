@@ -29,5 +29,12 @@
 
 /* regole navigazione */
 .nav {
-  display: none;
+  position: absolute;
+  bottom: 10px;
+}
+
+.nav i.active {
+  color: #fff;
+  border: 1px solid #000;
+  border-radius: 50%;
 }

@@ -17,13 +17,20 @@ $(document).ready(function() {
     // tolgo la classe "active" all'elemento selezionato
     imgActive.removeClass("active");
 
+    // applico la stessa logica anche per i pallini di navigazione
+    var circleActive = $(".nav i.active");
+    circleActive.removeClass("active");
+
     // controllo se l'immagine selezionata è l'ultima
     if(imgActive.hasClass("last")) {
       // se è l'ultima aggiungo la classe active alla prima img
       $(".images img.first").addClass("active");
+      // faccio la stessa cosa con i pallini di navigazione
+      $(".nav i.first").addClass("active");
     } else {
       // altrimenti assegno la classe active alla prossima img
       imgActive.next().addClass("active");
+      circleActive.next().addClass("active");
     }
   }
 
@@ -33,14 +40,18 @@ $(document).ready(function() {
     var imgActive = $(".images img.active");
     // tolgo la classe "active" all'elemento selezionato
     imgActive.removeClass("active");
+    var circleActive = $(".nav i.active");
+    circleActive.removeClass("active");
 
     // controllo se l'immagine selezionata è la prima
     if(imgActive.hasClass("first")) {
       // se è la prima aggiungo la classe active all'ultima img
       $(".images img.last").addClass("active");
+      $(".nav i.last").addClass("active");
     } else {
       // altrimenti assegno la classe active alla precedent img
       imgActive.prev().addClass("active");
+      circleActive.prev().addClass("active");
     }
   }
 
