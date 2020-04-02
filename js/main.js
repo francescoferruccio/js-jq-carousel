@@ -9,7 +9,7 @@ $(document).ready(function() {
   $(".next i").click(nextImg);
   // al click sull'icona prev eseguo la funzione prevImg
   $(".prev i").click(prevImg);
-
+  // al click sui pallini esegue la funzine changeImg
   $(".nav i").click(changeImg);
 
   // creo la funzione nextImg che scorre le immagini del carousel

@@ -28,6 +28,12 @@
 }
 
 /* regole navigazione */
+.prev i:hover,
+.next i:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
 .nav {
   position: absolute;
   bottom: 10px;
@@ -37,4 +43,9 @@
   color: #fff;
   border: 1px solid #000;
   border-radius: 50%;
+}
+
+.nav i:hover{
+  cursor: pointer;
+  transform: scale(1.2);
 }
